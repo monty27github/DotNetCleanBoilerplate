@@ -16,7 +16,6 @@ namespace Application.Services
             _mapper = mapper;
             _employeeRepository = employeeRepository;
         }
-
         public async Task<List<EmployeeDto>> GetAllEmployeesAsync()
         {
             return _mapper.Map<List<EmployeeDto>>( await _employeeRepository.GetAllEmployeesAsync());
